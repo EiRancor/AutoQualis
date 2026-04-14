@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoQualis</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <h1>AutoQualis</h1>
+      <p>Extração automática de pontuação via ISSN</p>
+      
+      <div class="card">
+        <button id="btn-selecionar">Selecionar Artigo (PDF)</button>
+        <p id="file-path"></p>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <hr>
+        <h2>Resultado da Análise</h2>
+        <div id="resultado-content"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

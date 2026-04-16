@@ -43,6 +43,14 @@ O projeto utiliza uma arquitetura híbrida de alta performance, combinando **Rus
     ```bash
     bun tauri dev
     ```
+## 📍 Roadmap / Próximos Passos
+
+O AutoQualis está em fase ativa de desenvolvimento. As próximas funcionalidades planejadas incluem:
+
+- [ ] **Integração com a Base Sucupira:** Consulta automática ao banco de dados da CAPES para converter o ISSN extraído no estrato Qualis correspondente (A1, A2, etc.).
+- [ ] **Processamento em Lote (Batch Processing):** Possibilidade de arrastar uma pasta inteira de PDFs e gerar um relatório consolidado (CSV/Excel).
+- [ ] **Banco de Dados Local:** Armazenamento dos resultados em SQLite para evitar reprocessamento de arquivos já analisados (alinhado à filosofia de soberania de dados).
+- [ ] **Interface de Filtros:** Filtro rápido para identificar quais artigos não possuem ISSN ou estão fora do estrato desejado.
 
 ## 📄 Licença
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

@@ -7,20 +7,68 @@
     <title>AutoQualis</title>
   </head>
   <body>
-    <div id="app" class="container">
-      <h1>AutoQualis</h1>
-      <p>Extração automática de pontuação via ISSN</p>
-      
-      <div class="card">
-        <button id="btn-selecionar">Selecionar Artigo (PDF)</button>
-        <p id="file-path"></p>
+    <div id="app">
+
+      <!-- ── Cabeçalho ── -->
+      <header class="header">
+        <div class="header-inner">
+          <span class="logo">🎓 AutoQualis</span>
+          <span class="subtitle">Classificação Qualis/CAPES automática via ISSN</span>
+        </div>
+      </header>
+
+      <!-- ── Área principal ── -->
+      <main class="main">
+
+        <!-- Card de seleção de arquivo -->
+        <div class="card upload-card">
+          <div class="upload-area" id="upload-area">
+            <span class="upload-icon">📄</span>
+            <p class="upload-label">Arraste um artigo PDF aqui</p>
+            <p class="upload-sub">ou</p>
+            <button id="btn-selecionar" class="btn-primary">Selecionar PDF</button>
+          </div>
+          <p id="file-path" class="file-path"></p>
+        </div>
+
+        <!-- Card de resultado (inicialmente oculto) -->
+        <div id="result-container" class="card result-card hidden">
+          <div class="result-header">
+            <span id="result-icon">✔</span>
+            <h2 id="result-title">Resultado da Análise</h2>
+          </div>
+
+          <div id="issn-info" class="issn-info hidden">
+            <span class="label">ISSN:</span>
+            <span id="issn-valor" class="issn-badge">—</span>
+          </div>
+
+          <div id="titulo-info" class="titulo-info hidden">
+            <span class="label">Periódico:</span>
+            <span id="titulo-valor">—</span>
+          </div>
+
+          <div id="qualis-grid" class="qualis-grid"></div>
+
+          <p id="result-error" class="result-error hidden"></p>
+        </div>
+
+      </main>
+
+      <!-- ── Painel de Log (terminal) ── -->
+      <div id="log-panel" class="log-panel">
+        <div class="log-header">
+          <span class="log-title">📋 Log de Processamento</span>
+          <div class="log-controls">
+            <button id="log-clear" class="log-btn" title="Limpar log">✕</button>
+            <button id="log-toggle" class="log-btn" title="Minimizar/Expandir">▼</button>
+          </div>
+        </div>
+        <div id="log-body" class="log-body">
+          <p class="log-hint">O log aparecerá aqui durante o processamento...</p>
+        </div>
       </div>
 
-      <div id="result-container" class="hidden">
-        <hr>
-        <h2>Resultado da Análise</h2>
-        <div id="resultado-content"></div>
-      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

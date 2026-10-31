@@ -23,11 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
-# Ignorar binários pesados do sidecar
+# Ignorar binários pesados do sidecar (gerados localmente)
 src-tauri/bin/
 
-# Pastas do ambiente Python
+# Python
+__pycache__/
+*.py[cod]
 python_motor/dist/
 python_motor/build/
 python_motor/venv/
-python_motor/*.spec
